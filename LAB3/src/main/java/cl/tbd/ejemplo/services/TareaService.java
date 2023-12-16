@@ -28,4 +28,23 @@ public class TareaService {
         return result;
     }
 
+    @DeleteMapping("/tarea/{id}")
+    public boolean deleteTarea(@PathVariable int id){
+        return tareaRepository.deleteTarea(id);
+    }
+
+    @PutMapping("/tarea/{id}")
+    @ResponseBody
+    public Tarea updateTarea(@RequestBody Tarea tarea, @PathVariable int id){
+        Tarea result = tareaRepository.updateTarea(tarea, id);
+        return result;
+    }
+
+    @GetMapping("/tarea/{id}")
+    @ResponseBody
+    public Tarea getTarea(@PathVariable int id){
+        Tarea result = tareaRepository.getTarea(id);
+        return result;
+    }
+
 }

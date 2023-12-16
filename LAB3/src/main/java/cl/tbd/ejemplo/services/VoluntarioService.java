@@ -25,4 +25,23 @@ public class VoluntarioService {
         Voluntario result = voluntarioRepository.createVoluntario(voluntario);
         return result;
     }
+
+    @DeleteMapping("/voluntario/{id}")
+    public boolean deleteVoluntario(@PathVariable int id){
+        return voluntarioRepository.deleteVoluntario(id);
+    }
+
+    @PutMapping("/voluntario/{id}")
+    @ResponseBody
+    public Voluntario updateVoluntario(@RequestBody Voluntario voluntario, @PathVariable int id){
+        Voluntario result = voluntarioRepository.updateVoluntario(voluntario, id);
+        return result;
+    }
+
+    @GetMapping("/voluntario/{id}")
+    @ResponseBody
+    public Voluntario getVoluntario(@PathVariable int id){
+        Voluntario result = voluntarioRepository.getVoluntario(id);
+        return result;
+    }
 }

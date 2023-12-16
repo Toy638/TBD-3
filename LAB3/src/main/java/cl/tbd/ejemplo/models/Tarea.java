@@ -8,22 +8,28 @@ public class Tarea {
     @BsonId
     ObjectId _id;
 
+    private Integer id_tarea2;
+
     private String asunto_tarea;
 
     private Boolean estado_tarea;
 
-    private Long id_emergencia;
-
-    private double latitud;
-
-    private double longitud;
+    private Integer id_emergencia;
 
     public ObjectId get_id() {
         return _id;
     }
 
+    public Integer getId_tarea2() {
+        return id_tarea2;
+    }
+
     public void set_id(ObjectId _id) {
         this._id = _id;
+    }
+
+    public void setId_tarea2(Integer id_tarea2) {
+        this.id_tarea2 = id_tarea2;
     }
 
     public String getAsunto_tarea() {
@@ -42,27 +48,12 @@ public class Tarea {
         this.estado_tarea = estado_tarea;
     }
 
-    public Long getId_emergencia() {
+    public Integer getId_emergencia() {
         return id_emergencia;
     }
 
-    public void setId_emergencia(Long id_emergencia) {
+    public void setId_emergencia(Integer id_emergencia) {
         this.id_emergencia = id_emergencia;
     }
 
-    public double getLatitud() {
-        return latitud;
-    }
-
-    public void setLatitud(double latitud) {
-        this.latitud = latitud;
-    }
-
-    public double getLongitud() {
-        return longitud;
-    }
-
-    public void setLongitud(double longitud) {
-        this.longitud = longitud;
-    }
 }

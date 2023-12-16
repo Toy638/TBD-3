@@ -7,6 +7,8 @@ import org.bson.types.ObjectId;
 public class Voluntario {
     @BsonId
     ObjectId id_voluntario;
+
+    private Integer id_voluntario2;
     private String nombre;
     private String apellido;
     private String telefono;
@@ -16,8 +18,16 @@ public class Voluntario {
         return id_voluntario;
     }
 
+    public Integer getId_voluntario2() {
+        return id_voluntario2;
+    }
+
     public void setId_voluntario(ObjectId id_voluntario) {
         this.id_voluntario = id_voluntario;
+    }
+
+    public void setId_voluntario2(Integer id_voluntario2) {
+        this.id_voluntario2 = id_voluntario2;
     }
 
     private String id_usuario;
